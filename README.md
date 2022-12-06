@@ -1,5 +1,5 @@
 # CSF-hailstone
-## Due: December 08 by 23:59:59
+## Due: December 07 by 23:59:59
 ---
 
 ## Introduction
