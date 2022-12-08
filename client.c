@@ -63,7 +63,7 @@ int main(int argc, char **argv)
     // }
     Rio_writen(clientfd, buf, strlen(buf));
     Rio_readlineb(&rio, buf, MAXLINE);
-    Fputs(buf, stdout);
+    // Fputs(buf, stdout);
     
     }
     Close(clientfd);
