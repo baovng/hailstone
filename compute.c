@@ -12,8 +12,7 @@ void compute(int connfd)
 
     Rio_readinitb(&rio, connfd);
     while((n = Rio_readlineb(&rio, buf, MAXLINE)) != 0) {
-	printf("Received %d bytes\n", n);
-    printf("Received %s bytes\n", buf);
+    printf("Received %s\n", buf);
 	Rio_writen(connfd, buf, n);
     }
 }

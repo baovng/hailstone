@@ -28,7 +28,7 @@ int main(int argc, char **argv)
     connect_idx = 2; 
     
     Rio_readinitb(&rio, clientfd);
-
+    printf("-->Enter A Positive Integer: ");
     while (Fgets(buf, MAXLINE, stdin) != NULL) {
     // while(1) {
     //     printf("-->Enter A Positive Integer (^d to quit): ");
