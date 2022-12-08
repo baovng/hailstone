@@ -31,7 +31,7 @@ int main(int argc, char **argv)
     printf("-->Enter A Positive Integer: ");
     scanf("%s", buf);
     
-    while ((strcmp(buf, "") == 1)) {
+    while ((strcmp(buff,"")0)) {
     // while(1) {
     //     printf("-->Enter A Positive Integer (^d to quit): ");
     //     scanf("%s", myStr);
