@@ -65,32 +65,32 @@ int main(int argc, char **argv)
     Rio_writen(clientfd, buf, strlen(buf));
     Rio_readlineb(&rio, buf, MAXLINE);
     printf("string buf %s",buf);
-    if(strcmp(buf, "^d") == 0){
-                printf("--> Disconnected from localhost port x. Goodbye.\n");
-                Close(clientfd);
-                exit(0);
-        }if((strcmp(buf, "0") == 0) || (strstr(buf, "-") != NULL)||(strcmp(buf, "") == 0)){
+    if((strstr(buf, "^d") != NULL)){
+            printf("--> Disconnected from localhost port x. Goodbye.\n");
+            Close(clientfd);
+            exit(0);
+    }if((strstr(buf, "0") != NULL) || (strstr(buf, "-") != NULL) || (strstr(buf, "") != NULL)){
             printf("Retry with possitive integer \n");
             
-        }else{
-                //hailstone program here
-                // printf("Your String is %s\n",myStr);
-                // printf("count %d\n",connect_idx);
-                length = 1;
-                num = atoi(buf);
-                printf("[HSS:%d:x] Sequence start with %d \n",connect_idx,num);
-                while(num != 1)
-                {
-                    if( num % 2 )  /* true if odd */
-                        num = (num*3)+1;
-                    else                /* even */
-                        num /= 2;
-                    printf("[HSS:%d:x] %d \n",connect_idx,num);
-                    length++;
-                }
-                printf("[HSS:%d:x] Finished.  Number of iterations = %d\n\n",connect_idx,(length-1));
-                connect_idx++;          
+    }else{
+            //hailstone program here
+            // printf("Your String is %s\n",myStr);
+            // printf("count %d\n",connect_idx);
+            length = 1;
+            num = atoi(buf);
+            printf("[HSS:%d:x] Sequence start with %d \n",connect_idx,num);
+            while(num != 1)
+            {
+                if( num % 2 )  /* true if odd */
+                    num = (num*3)+1;
+                else                /* even */
+                    num /= 2;
+                printf("[HSS:%d:x] %d \n",connect_idx,num);
+                length++;
             }
+            printf("[HSS:%d:x] Finished.  Number of iterations = %d\n\n",connect_idx,(length-1));
+            connect_idx++;          
+        }
     // Fputs(buf, stdout);
     printf("-->Enter A Positive Integer (^d to quit): ");
     }
