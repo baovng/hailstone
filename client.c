@@ -26,7 +26,7 @@ int main(int argc, char **argv)
     printf("[HSS:1:1] Welcome to the Hailstone Sequence Server v1.0\n\n");
     flag = 1;
     connect_idx = 2; 
-    printf("-->Enter A Positive Integer (^d to quit): ")
+    printf("-->Enter A Positive Integer (^d to quit): ");
     // while(1) {
     //     printf("-->Enter A Positive Integer (^d to quit): ");
     //     scanf("%s", myStr);
@@ -66,7 +66,7 @@ int main(int argc, char **argv)
     Rio_readlineb(&rio, buf, MAXLINE);
     printf("string buf %s",buf);
     // Fputs(buf, stdout);
-    printf("-->Enter A Positive Integer (^d to quit): ")
+    printf("-->Enter A Positive Integer (^d to quit): ");
     }
     Close(clientfd);
     exit(0); //line:netp:echoclient:close
