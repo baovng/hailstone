@@ -35,6 +35,8 @@ int main(int argc, char **argv)
     while(1) {
         printf("-->Enter A Positive Integer (^d to quit): ");
         scanf("%s", buf);
+        Rio_writen(clientfd, buf, strlen(buf));
+        Rio_readlineb(&rio, buf, MAXLINE);
         if(strcmp(buf, "^d") == 0){
                 printf("--> Disconnected from localhost port x. Goodbye.\n");
                 Close(clientfd);
