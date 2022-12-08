@@ -30,6 +30,10 @@ int main(int argc, char **argv)
 	printf("Listening On Port \n\n");
 	printf("Waiting for connection...\n");
 
+	printf("Listening On Port argv 1\n",argv[1]);
+	printf("Listening On Port argve 2\n",argv[1]);
+	printf("Listening On Port argv 0\n",argv[1]);
+
     while (1) {
 	clientlen = sizeof(struct sockaddr_storage); 
 	connfd = Accept(listenfd, (SA *) &clientaddr, &clientlen);

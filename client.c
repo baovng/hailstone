@@ -64,7 +64,7 @@ int main(int argc, char **argv)
     
     Rio_writen(clientfd, buf, strlen(buf));
     Rio_readlineb(&rio, buf, MAXLINE);
-    printf("string buf %s",buf);
+    // printf("string buf %s",buf);
     if((strstr(buf, "^d") != NULL)){
             printf("--> Disconnected from localhost port x. Goodbye.\n");
             Close(clientfd);

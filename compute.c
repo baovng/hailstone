@@ -13,6 +13,7 @@ void compute(int connfd)
     Rio_readinitb(&rio, connfd);
     while((n = Rio_readlineb(&rio, buf, MAXLINE)) != 0) {
     printf("Received %s\n", buf);
+    printf("Sending sequence \n");
 	Rio_writen(connfd, buf, n);
     }
 }
