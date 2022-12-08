@@ -46,8 +46,8 @@ int main(int argc, char **argv)
                 //hailstone program here
                 // printf("Your String is %s\n",myStr);
                 // printf("count %d\n",connect_idx);
-                Rio_writen(clientfd, buf, strlen(buf));
-                Rio_readlineb(&rio, buf, MAXLINE);
+                // Rio_writen(clientfd, buf, strlen(buf));
+                // Rio_readlineb(&rio, buf, MAXLINE);
                 length = 1;
                 num = atoi(buf);
                 printf("[HSS:%d:x] Sequence start with %d \n",connect_idx,num);
