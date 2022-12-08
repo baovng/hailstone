@@ -69,7 +69,7 @@ int main(int argc, char **argv)
             printf("--> Disconnected from localhost port x. Goodbye.\n");
             Close(clientfd);
             exit(0);
-    }if((strstr(buf, "0") != NULL) || (strstr(buf, "-") != NULL) || (strstr(buf, "") != NULL)){
+    }if((strstr(buf, "0") != NULL) || (strstr(buf, "-") != NULL)){
             printf("Retry with possitive integer \n");
             
     }else{
