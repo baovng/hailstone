@@ -30,7 +30,7 @@ int main(int argc, char **argv)
     Rio_readinitb(&rio, clientfd);
     printf("-->Enter A Positive Integer: ");
     scanf("%s", buf);
-    printf(""%s", buf");
+    printf("%s", buf);
     while (Fgets(buf, MAXLINE, stdin) != NULL) {
     // while(1) {
     //     printf("-->Enter A Positive Integer (^d to quit): ");
