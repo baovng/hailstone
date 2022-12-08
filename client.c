@@ -31,7 +31,7 @@ int main(int argc, char **argv)
     printf("-->Enter A Positive Integer: ");
     scanf("%s", buf);
     
-    while (Fgets(buf, MAXLINE, stdin) != NULL) {
+    while ((strcmp(buf, "") == 1)) {
     // while(1) {
     //     printf("-->Enter A Positive Integer (^d to quit): ");
     //     scanf("%s", myStr);
@@ -63,7 +63,7 @@ int main(int argc, char **argv)
     //         }
         
     // }
-    printf("%s", buf);
+    printf(" F here %s", buf);
     Rio_writen(clientfd, buf, strlen(buf));
     // Rio_readlineb(&rio, buf, MAXLINE);
     // Fputs(buf, stdout);
