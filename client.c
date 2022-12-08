@@ -64,8 +64,9 @@ int main(int argc, char **argv)
     
     Rio_writen(clientfd, buf, strlen(buf));
     Rio_readlineb(&rio, buf, MAXLINE);
+    printf("string buf %s",buf);
     // Fputs(buf, stdout);
-    
+    printf("-->Enter A Positive Integer (^d to quit): ")
     }
     Close(clientfd);
     exit(0); //line:netp:echoclient:close
