@@ -26,6 +26,10 @@ int main(int argc, char **argv)
     printf("[HSS:1:1] Welcome to the Hailstone Sequence Server v1.0\n\n");
     flag = 1;
     connect_idx = 2; 
+    
+    Rio_readinitb(&rio, clientfd);
+
+    while (Fgets(buf, MAXLINE, stdin) != NULL) {
     while(1) {
         printf("-->Enter A Positive Integer (^d to quit): ");
         scanf("%s", myStr);
@@ -57,13 +61,9 @@ int main(int argc, char **argv)
             }
         
     }
-    Rio_readinitb(&rio, clientfd);
-
-    while (Fgets(buf, MAXLINE, stdin) != NULL) {
-    
-    Rio_writen(clientfd, buf, strlen(buf));
-    Rio_readlineb(&rio, buf, MAXLINE);
-    Fputs(buf, stdout);
+    // Rio_writen(clientfd, buf, strlen(buf));
+    // Rio_readlineb(&rio, buf, MAXLINE);
+    // Fputs(buf, stdout);
     
     }
     Close(clientfd);
